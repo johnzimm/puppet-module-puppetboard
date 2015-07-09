@@ -4,6 +4,5 @@ WSGIScriptAlias <%= @wsgi_alias -%> <%= @docroot -%>/wsgi.py
 <Directory <%= @docroot -%>>
     WSGIProcessGroup <%= @user %>
     WSGIApplicationGroup %{GLOBAL}
-    Order deny,allow
-    Allow from all
+    Require all granted
 </Directory>
